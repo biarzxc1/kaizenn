@@ -52,6 +52,7 @@ body {
     color: var(--text-primary);
     min-height: 100vh;
     min-height: 100svh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +184,8 @@ a {
 .container {
     position: relative;
     z-index: 1;
-    width: min(100%, 940px);
+    width: calc(100vw - 48px);
+    max-width: 940px;
     display: grid;
     grid-template-columns: minmax(250px, 330px) minmax(0, 1fr);
     align-items: center;
@@ -507,7 +509,8 @@ a {
     }
 
     .container {
-        width: min(100%, 560px);
+        width: calc(100vw - 40px);
+        max-width: 560px;
         grid-template-columns: 1fr;
         gap: 34px;
     }
@@ -518,6 +521,7 @@ a {
 
     .about-section {
         text-align: left;
+        width: min(100%, calc(100vw - 40px));
     }
 
     .about-title {
@@ -533,6 +537,7 @@ a {
 @media (max-width: 520px) {
     body {
         padding: 66px 14px 24px;
+        justify-content: flex-start;
     }
 
     .theme-toggle {
@@ -543,6 +548,8 @@ a {
     }
 
     .container {
+        width: min(360px, calc(100vw - 28px));
+        max-width: 360px;
         gap: 28px;
     }
 
@@ -576,6 +583,11 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .about-section {
+        width: min(360px, calc(100vw - 28px));
+        max-width: 360px;
+    }
+
     .skill-item {
         min-height: 88px;
         padding: 15px;
@@ -586,6 +598,16 @@ a {
     body {
         padding-left: 12px;
         padding-right: 12px;
+    }
+
+    .container {
+        width: min(336px, calc(100vw - 24px));
+        max-width: 336px;
+    }
+
+    .about-section {
+        width: min(336px, calc(100vw - 24px));
+        max-width: 336px;
     }
 
     .profile-name {
