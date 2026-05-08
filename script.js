@@ -33,9 +33,13 @@
       }
     ],
 
-    stats: [
-      { value: "2008", label: "Year of birth" },
-      { value: "Philippines", label: "Location" }
+    aboutText: "I build game scripts, backend APIs, databases, and modern websites/web apps.",
+
+    skills: [
+      { name: "Lua", detail: "game scripting" },
+      { name: "JS / Node.js", detail: "build Express APIs + databases" },
+      { name: "Python", detail: "build APIs" },
+      { name: "Next.js", detail: "build modern websites/web apps" }
     ]
   };
 
@@ -54,7 +58,8 @@
     quoteText: $("quoteText"),
     typingQuote: $("typingQuote"),
     socialIcons: $("socialIcons"),
-    statsContainer: $("statsContainer")
+    aboutText: $("aboutText"),
+    skillsList: $("skillsList")
   };
 
   function hasElements(...names) {
@@ -149,25 +154,29 @@ function renderProfileName() {
     });
   }
 
-  function renderStats() {
-    if (!elements.statsContainer) return;
+  function renderAbout() {
+    if (elements.aboutText) {
+      elements.aboutText.textContent = CONFIG.aboutText;
+    }
 
-    elements.statsContainer.textContent = "";
+    if (!elements.skillsList) return;
 
-    CONFIG.stats.forEach((stat) => {
-      const statEl = document.createElement("div");
-      statEl.className = "stat-item";
+    elements.skillsList.textContent = "";
 
-      const valueEl = document.createElement("div");
-      valueEl.className = "stat-value";
-      valueEl.textContent = stat.value;
+    CONFIG.skills.forEach((skill) => {
+      const skillEl = document.createElement("div");
+      skillEl.className = "skill-item";
 
-      const labelEl = document.createElement("div");
-      labelEl.className = "stat-label";
-      labelEl.textContent = stat.label;
+      const nameEl = document.createElement("div");
+      nameEl.className = "skill-name";
+      nameEl.textContent = skill.name;
 
-      statEl.append(valueEl, labelEl);
-      elements.statsContainer.appendChild(statEl);
+      const detailEl = document.createElement("div");
+      detailEl.className = "skill-detail";
+      detailEl.textContent = skill.detail;
+
+      skillEl.append(nameEl, detailEl);
+      elements.skillsList.appendChild(skillEl);
     });
   }
 
@@ -218,7 +227,7 @@ function initApp() {
     initTheme();
     renderProfileName();
     renderSocialLinks();
-    renderStats();
+    renderAbout();
 
     window.setTimeout(typeQuote, 1500);
   }
