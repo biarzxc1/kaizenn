@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siegfried Samá - Portfolio</title>
+
+    <link rel="icon" href="https://imgur.com/5e5eBdd.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="https://imgur.com/5e5eBdd.jpg" type="image/jpeg">
+
+    <meta property="og:title" content="Siegfried Samá - Portfolio" />
+    <meta property="og:description" content="Portfolio - Developer & Designer" />
+    <meta property="og:image" content="https://imgur.com/5e5eBdd.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Siegfried Samá - Portfolio" />
+    <meta name="twitter:description" content="Portfolio - Developer & Designer" />
+    <meta name="twitter:image" content="https://imgur.com/5e5eBdd.jpg" />
+
+    <meta name="description" content="Siegfried Samá - Portfolio - Developer & Designer" />
+    <meta name="author" content="Siegfried Samá" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://files.catbox.moe/oeyu9a.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <button class="menu-button" id="menuButton">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+    </button>
+
+    <div class="menu-panel" id="menuPanel"></div>
+
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-image-wrapper">
+                <div class="glow-ring"></div>
+                <img src="https://imgur.com/5e5eBdd.jpg" alt="Profile Picture" class="profile-image">
+            </div>
+
+            <h1 class="profile-name" id="profileName"></h1>
+            <p class="profile-subtitle">developer</p>
+            <p class="beta-label">(beta)</p>
+            <p class="profile-quote" id="typingQuote">
+                <span id="quoteText"></span><span class="typing-cursor"></span>
+            </p>
+
+            <div class="social-icons" id="socialIcons"></div>
+        </div>
+
+        <div class="stats" id="statsContainer"></div>
+
+        <div class="time-battery-section">
+            <div class="ph-time-display" id="phTime"></div>
+            <div class="ping-display" id="pingValue">0ms</div>
+            <div class="time-label">PHT (GMT+8)</div>
+
+            <div class="battery-container">
+                <div class="battery-icon">
+                    <div class="battery-fill" id="batteryFill"></div>
+                </div>
+                <div class="battery-percentage" id="batteryPercentage"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">© 2026 | Developed by: Siegfried Samá</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
