@@ -40,18 +40,9 @@
     ],
 
     projects: [
-      {
-        name: "Anime Streaming Website",
-        detail: "modern anime watch site concept with clean pages and responsive layout"
-      },
-      {
-        name: "Survive the Apocalypse Script",
-        detail: "Roblox Lua scripting project for gameplay tools and client features"
-      },
-      {
-        name: "Facebook Automation Boost",
-        detail: "automation project focused on repeatable browser actions and workflow speed"
-      }
+      { name: "Anime Streaming Website" },
+      { name: "Survive the Apocalypse Script" },
+      { name: "Facebook Automation Boost" }
     ]
   };
 
@@ -216,11 +207,7 @@
       nameEl.className = "project-name";
       nameEl.textContent = project.name;
 
-      const detailEl = document.createElement("div");
-      detailEl.className = "project-detail";
-      detailEl.textContent = project.detail;
-
-      projectEl.append(nameEl, detailEl);
+      projectEl.appendChild(nameEl);
       elements.projectsList.appendChild(projectEl);
     });
   }
