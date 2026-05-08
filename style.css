@@ -11,7 +11,6 @@
     --accent-color: #ff1744;
     --accent-glow: rgba(255, 23, 68, 0.3);
     --border-color: rgba(0, 0, 0, 0.08);
-    --menu-hover-bg: rgba(255, 23, 68, 0.04);
     --transition-speed: 0.6s;
 }
 
@@ -22,7 +21,6 @@
     --accent-color: #ff1744;
     --accent-glow: rgba(255, 23, 68, 0.4);
     --border-color: rgba(255, 255, 255, 0.1);
-    --menu-hover-bg: rgba(255, 23, 68, 0.08);
 }
 
 body {
@@ -138,9 +136,6 @@ body.theme-transitioning::before {
     60%  { transform: scale(1.15) rotate(-10deg); }
     80%  { transform: scale(0.95) rotate(5deg); }
     100% { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-    50%       { transform: translateY(-8px); }
 }
 
 .profile-image {
@@ -319,14 +314,10 @@ body.theme-transitioning::before {
                 color var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--text-primary);
     text-decoration: none;
-    will-change: transform;
+will-change: transform;
 }
 
 .social-icon:nth-child(2) { animation-delay: 1.8s; }
-
-    50%       { transform: translateY(-2px) scale(1.02); }
-}
-
 .social-icon:hover {
     transform: translateY(-4px) scale(1.12) rotate(2deg);
     color: var(--accent-color);
