@@ -73,7 +73,7 @@
     return svgEl;
   }
 
-  function initTheme() {
+function initTheme() {
     if (!elements.themeToggle) return;
 
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -96,7 +96,7 @@
     });
   }
 
-  function renderProfileName() {
+function renderProfileName() {
     if (!elements.profileName) return;
 
     elements.profileName.textContent = "";
@@ -214,11 +214,12 @@
     window.setTimeout(typeQuote, 500);
   }
 
-  function initApp() {
+function initApp() {
     initTheme();
     renderProfileName();
     renderSocialLinks();
     renderStats();
+
     window.setTimeout(typeQuote, 1500);
   }
 
