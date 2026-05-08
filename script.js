@@ -33,13 +33,15 @@
       }
     ],
 
-    aboutText: "I build game scripts, backend APIs, databases, and modern websites/web apps.",
+    aboutText: "I love making scripts and turning ideas into real working projects. I focus on game scripting, backend APIs, database-powered systems, automation, and modern websites/web apps with clean UI and smooth user experience.",
 
     skills: [
-      { name: "Lua", detail: "game scripting" },
-      { name: "JS / Node.js", detail: "build Express APIs + databases" },
-      { name: "Python", detail: "build APIs" },
-      { name: "Next.js", detail: "build modern websites/web apps" }
+      { name: "Lua", detail: "game scripting, client systems, and gameplay tools" },
+      { name: "JavaScript", detail: "interactive websites, browser logic, and app features" },
+      { name: "Node.js", detail: "Express APIs, backend routes, auth flows, and server logic" },
+      { name: "Databases", detail: "connect APIs to stored data for real app features" },
+      { name: "Python", detail: "build APIs, automation scripts, and backend utilities" },
+      { name: "Next.js", detail: "modern websites and web apps with responsive UI" }
     ]
   };
 
