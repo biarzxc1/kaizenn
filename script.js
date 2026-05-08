@@ -70,6 +70,7 @@
     const svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svgEl.setAttribute("fill", fill);
     svgEl.setAttribute("viewBox", "0 0 24 24");
+    svgEl.setAttribute("aria-hidden", "true");
 
     const pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
     pathEl.setAttribute("d", pathData);
@@ -78,7 +79,7 @@
     return svgEl;
   }
 
-function initTheme() {
+  function initTheme() {
     if (!elements.themeToggle) return;
 
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -101,7 +102,7 @@ function initTheme() {
     });
   }
 
-function renderProfileName() {
+  function renderProfileName() {
     if (!elements.profileName) return;
 
     elements.profileName.textContent = "";
@@ -111,10 +112,14 @@ function renderProfileName() {
 
     const badgeEl = document.createElement("span");
     badgeEl.className = "verified-badge";
+    badgeEl.setAttribute("role", "img");
+    badgeEl.setAttribute("aria-label", "Verified");
+    badgeEl.title = "Verified";
 
     const svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svgEl.setAttribute("viewBox", "0 0 40 40");
     svgEl.setAttribute("fill", "none");
+    svgEl.setAttribute("aria-hidden", "true");
 
     const circleEl = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circleEl.setAttribute("cx", "20");
@@ -164,7 +169,7 @@ function renderProfileName() {
     elements.skillsList.textContent = "";
 
     CONFIG.skills.forEach((skill) => {
-      const skillEl = document.createElement("div");
+      const skillEl = document.createElement("article");
       skillEl.className = "skill-item";
 
       const nameEl = document.createElement("div");
@@ -223,7 +228,7 @@ function renderProfileName() {
     window.setTimeout(typeQuote, 500);
   }
 
-function initApp() {
+  function initApp() {
     initTheme();
     renderProfileName();
     renderSocialLinks();
