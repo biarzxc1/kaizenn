@@ -413,6 +413,11 @@ a {
     stroke-width: 2.35;
 }
 
+.social-icon .brand-icon {
+    fill: currentColor;
+    stroke: none;
+}
+
 .about-section {
     min-width: 0;
 }
